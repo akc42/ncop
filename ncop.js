@@ -1,4 +1,4 @@
-NS = new Class({
+NCOP = new Class({
     initialize:function(myexec,unique) {
         this.myexec = myexec;
         this.stack = [];

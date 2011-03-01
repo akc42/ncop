@@ -91,9 +91,9 @@ execution before returning, the second one only executes one step, and
 needs to called again repeatedly until it returns false.  That is
 essence is the Nested Closure Technique.
 
-== How the NS class works
+== How the NCOP class works
 
-NS is implemented to work with the Mootools framework.  This version
+NCOP is implemented to work with the Mootools framework.  This version
 works with Mootools version 1.2. Some changes will have to be made for
 it to work with Mootools 1.3.
 
@@ -152,7 +152,7 @@ generate the asymetric key pair.
 ----------------------------------------------------------------
 RSA.prototype.generateAsync = function(keylen,exp,result) {
  var self=this;
- var generator = new NS stepping_generate,true);
+ var generator = new NCOP stepping_generate,true);
  var _result = function(keyPair) {
    result( self );
  };
@@ -278,7 +278,7 @@ function(result) {
 
 ----------------------------------------------------------------------
 
-Internally the NS class operates in two phases. These are driven
+Internally the NCOP class operates in two phases. These are driven
 around the call to DO or STEP. In the first phase these calls build a
 Step based structure in a context and returns. In the second phase
 these steps are executed step by step using a "ticker" function which

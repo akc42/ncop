@@ -33,7 +33,7 @@
 
 (function ( ) {
 
-	//This file has been reworked to rely on class NS - A Chandler May 2010
+	//This file has been reworked to rely on class NCOP - A Chandler May 2010
 	
     /////////////////////////////////////////// 
     // import
@@ -50,7 +50,7 @@
 	
     RSA.prototype.generateAsync = function(keylen,exp,result) {
 	var self=this;
-	var generator = new NS( stepping_generate,true);
+	var generator = new NCOP( stepping_generate,true);
 	
 
 	var _result = function(keyPair) {
